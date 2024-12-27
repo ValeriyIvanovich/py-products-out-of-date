@@ -35,7 +35,7 @@ def test_outdated_products(
             "name": "duck",
             "expiration_date": datetime.date(2022, 2, 11),
             "price": 160
-         },
+        },
     ]
     mocked_date.date.today.return_value = today_date
     result = outdated_products(product_list)

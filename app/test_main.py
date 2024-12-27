@@ -21,9 +21,18 @@ def test_outdated_products(
     mocked_date, today_date: datetime.date, expected: list
 ) -> None:
     product_list = [
-        {"name": "salmon", "expiration_date": datetime.date(2022, 2, 10), "price": 600},
-        {"name": "chicken", "expiration_date": datetime.date(2022, 2, 5), "price": 120},
-        {"name": "duck", "expiration_date": datetime.date(2022, 2, 11), "price": 160},
+        {"name": "salmon", 
+         "expiration_date": datetime.date(2022, 2, 10), 
+         "price": 600
+        },
+        {"name": "chicken", 
+         "expiration_date": datetime.date(2022, 2, 5), 
+         "price": 120
+        },
+        {"name": "duck", 
+         "expiration_date": datetime.date(2022, 2, 11), 
+         "price": 160
+        },
     ]
     mocked_date.date.today.return_value = today_date
     result = outdated_products(product_list)
